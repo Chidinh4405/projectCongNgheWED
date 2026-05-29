@@ -38,7 +38,7 @@ function StatCard({ label, value, icon, accent }) {
     }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, color: GOLD_DARK }}>
         <span style={{ fontSize: 18 }}>{icon}</span>
-        <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: "#8B6914", fontFamily: "Georgia, serif" }}>{label}</span>
+        <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: "#8B6914", fontFamily: "'Inter', sans-serif" }}>{label}</span>
       </div>
       <div style={{ fontSize: 26, fontWeight: 700, color: "#2C1F00", fontFamily: "Georgia, serif", letterSpacing: -0.5 }}>{formatNum(value)}</div>
     </div>
@@ -66,7 +66,7 @@ function SectionTitle({ children }) {
       display: "flex", alignItems: "center", gap: 10, marginBottom: 16,
     }}>
       <div style={{ width: 4, height: 20, background: GOLD, borderRadius: 2 }} />
-      <h3 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "#2C1F00", fontFamily: "Georgia, serif", letterSpacing: 0.2 }}>
+      <h3 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "#2C1F00", fontFamily: "'Inter', sans-serif", letterSpacing: 0.2 }}>
         {children}
       </h3>
     </div>
@@ -202,7 +202,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#FAFAF7", fontFamily: "'Segoe UI', sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "#FAFAF7", fontFamily: "'Inter', sans-serif" }}>
       {/* Header */}
       <div style={{ background: "#fff", borderBottom: `3px solid ${GOLD}`, padding: "0 32px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 14, height: 64 }}>
@@ -216,7 +216,7 @@ export default function App() {
             </svg>
           </div>
           <div>
-            <div style={{ fontSize: 17, fontWeight: 700, color: "#1A1200", fontFamily: "Georgia, serif", letterSpacing: 0.3 }}>Data Dashboard</div>
+            <div style={{ fontSize: 17, fontWeight: 700, color: "#1A1200", fontFamily: "'Inter', sans-serif", letterSpacing: 0.3 }}>Data Dashboard</div>
             <div style={{ fontSize: 11, color: GOLD_DARK, letterSpacing: 0.5, fontWeight: 500 }}>PHÂN TÍCH DỮ LIỆU TRỰC QUAN</div>
           </div>
         </div>
@@ -280,7 +280,7 @@ export default function App() {
                 <thead>
                   <tr style={{ background: GOLD_LIGHT }}>
                     {columns.map(c => (
-                      <th key={c} style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, color: GOLD_DARK, whiteSpace: "nowrap", fontFamily: "Georgia, serif", fontSize: 12 }}>{c}</th>
+                      <th key={c} style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, color: GOLD_DARK, whiteSpace: "nowrap", fontFamily: "'Inter', sans-serif", fontSize: 12 }}>{c}</th>
                     ))}
                   </tr>
                 </thead>
@@ -349,7 +349,7 @@ export default function App() {
               <button onClick={handleAnalyze} disabled={chartLoading || !fileId}
                 style={{
                   padding: "10px 22px", borderRadius: 8, background: GOLD, color: "#fff", border: "none",
-                  fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "Georgia, serif",
+                  fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "'Inter', sans-serif",
                   opacity: chartLoading ? 0.7 : 1, transition: "opacity 0.2s", whiteSpace: "nowrap",
                   boxShadow: `0 2px 8px rgba(180,140,20,0.25)`,
                 }}>
@@ -396,7 +396,7 @@ export default function App() {
         {!fileId && !loading && (
           <div style={{ textAlign: "center", padding: "48px 0", color: "#B8A060" }}>
             <div style={{ fontSize: 48, marginBottom: 12, opacity: 0.4 }}>📊</div>
-            <div style={{ fontSize: 14, fontWeight: 500, fontFamily: "Georgia, serif" }}>Upload file CSV hoặc Excel để bắt đầu phân tích</div>
+            <div style={{ fontSize: 14, fontWeight: 500, fontFamily: "'Inter', sans-serif" }}>Upload file CSV hoặc Excel để bắt đầu phân tích</div>
             <div style={{ fontSize: 12, marginTop: 6, color: "#C8B080" }}>Hỗ trợ kéo & thả trực tiếp vào ô trên</div>
           </div>
         )}
