@@ -40,7 +40,7 @@ function StatCard({ label, value, icon, accent }) {
         <span style={{ fontSize: 18 }}>{icon}</span>
         <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase", color: "#8B6914", fontFamily: "'Inter', sans-serif" }}>{label}</span>
       </div>
-      <div style={{ fontSize: 26, fontWeight: 700, color: "#2C1F00", fontFamily: "Georgia, serif", letterSpacing: -0.5 }}>{formatNum(value)}</div>
+      <div style={{ fontSize: 26, fontWeight: 700, color: "#2C1F00", fontFamily: "'Inter', sans-serif", letterSpacing: -0.5 }}>{formatNum(value)}</div>
     </div>
   );
 }
