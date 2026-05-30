@@ -6,7 +6,7 @@ import {
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from "recharts";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://projectcongnghewed.onrender.com";
 
 const GOLD = "#C9A84C";
 const GOLD_DARK = "#8B6914";
