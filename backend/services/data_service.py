@@ -28,10 +28,10 @@ def get_chart_data(file_id: str, chart_type: str, x_col: str, y_col: str):
             raise ValueError(f"Không tìm thấy cột: {col}")
 
     if chart_type in ["bar", "pie"]:
-        df[y_col] = pd.to_numeric(df[y_col], errors="coerce").fillna(0)
-        grouped = df.groupby(x_col)[y_col].sum() 
-    else:
-        grouped = df.groupby(x_col)[y_col].count()  # cột text → đếm
+        if pd.api.types.is_numeric_dtype(df[y_col]):
+            grouped = df.groupby(x_col)[y_col].sum() 
+        else:
+            grouped = df.groupby(x_col)[y_col].count()  # cột text → đếm
         return {
             "labels": list(grouped.index.astype(str)),
             "values": [float(v) for v in grouped.values]
